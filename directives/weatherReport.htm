@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ convertToDate({dt: weatherObject.dt}) | date: dateFormat }}</h3>
+    </div>
+    <div class="panel-body">
+      {{ weatherObject.temp.day }} °C
+      <img src="http://openweathermap.org/img/w/{{ weatherObject.weather[0].icon }}.png" alt="{{ weatherObject.weather[0].main }}">
+      {{ weatherObject.weather[0].description }}
+    </div>
+</div>
